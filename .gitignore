@@ -1,0 +1,46 @@
+# Visual Studio
+.vs/
+*.slnx
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# C++Builder
+*.cbproj.local
+*.groupproj.local
+*.res
+*.lib
+*.o
+*.exe
+*.map
+*.pdb
+*.pch
+*.lnk
+
+# History files
+__history/
+*.~*
+
+# IDE files
+*.cbproj.local
+*.groupproj.local
+CppProperties.json
+
+# Temporary files
+*.tmp
+*.temp

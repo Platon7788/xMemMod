@@ -149,7 +149,7 @@ xMemMod/
 
 ## 🎯 Примеры использования
 
-### Пример 1: Загрузка WinDivert DLL
+### Пример 1: Загрузка SomeDll DLL
 
 ```cpp
 #include "xMemMod.h"
@@ -158,15 +158,15 @@ xMemMod/
 int main() {
     MemoryModule::MemoryModule module;
     
-    // Загрузка WinDivert DLL из памяти
-    if (module.LoadFromMemory(WinDivertDll, WinDivertDllSize)) {
+    // Загрузка SomeDll DLL из памяти
+    if (module.LoadFromMemory(SomeDll, SomeDllSize)) {
         std::cout << "DLL загружена успешно!" << std::endl;
         
-        // Получение функции WinDivertOpen
-        auto WinDivertOpen = module.GetProcAddress("WinDivertOpen");
-        if (WinDivertOpen) {
-            std::cout << "WinDivertOpen найден: 0x" 
-                      << std::hex << WinDivertOpen << std::endl;
+        // Получение функции SomeDllOpen
+        auto SomeDllOpen = module.GetProcAddress("SomeDllOpen");
+        if (SomeDllOpen) {
+            std::cout << "SomeDllOpen найден: 0x" 
+                      << std::hex << SomeDllOpen << std::endl;
         }
         
         // Получение всех экспортов
@@ -176,29 +176,6 @@ int main() {
     
     return 0;
 }
-```
-
-### Пример 2: Работа с сетевым драйвером
-
-```cpp
-class NetworkDriver {
-private:
-    MemoryModule::MemoryModule module_;
-    
-public:
-    bool LoadDriver(const void* dll_data, size_t size) {
-        return module_.LoadFromMemory(dll_data, size);
-    }
-    
-    bool OpenHandle() {
-        auto WinDivertOpen = module_.GetProcAddress("WinDivertOpen");
-        if (!WinDivertOpen) return false;
-        
-        // Использование функции
-        // HANDLE handle = WinDivertOpen(filter, layer, priority, flags);
-        return true;
-    }
-};
 ```
 
 ## 🔒 Безопасность

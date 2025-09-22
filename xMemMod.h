@@ -2,12 +2,12 @@
  * @file xMemMod.h
  * @brief MemoryModule - Статическая библиотека для загрузки DLL из памяти
  * @details Современная реализация C++17/20 для Windows x86/x64
- * @author Platon
- * @version 3.0.0
+ * @author ︻┻┳══━一 Pl∀tonシ
+ * @version 2.0.0
  * @date 2025
  *
  * @license MIT License
- * @copyright Copyright (c) 2025 Platon
+ * @copyright Copyright (c) 2025 ︻┻┳══━一 Pl∀tonシ
  *
  * Основные возможности:
  * - Загрузка DLL из массива байтов в памяти (без записи на диск)
